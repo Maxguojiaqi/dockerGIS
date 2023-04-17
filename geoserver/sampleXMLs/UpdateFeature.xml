@@ -1,0 +1,27 @@
+
+<!--http://localhost/geoserver/docker/wfs-->
+
+<wfs:Transaction service="WFS" version="1.1.0"
+  xmlns:ogc="http://www.opengis.net/ogc"
+  xmlns:wfs="http://www.opengis.net/wfs"
+  xmlns:gml="http://www.opengis.net/gml">
+  <wfs:Update typeName="docker:poi">
+  <Property>
+    <Name>geom</Name>
+    <Value>
+      <gml:Point srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                <gml:coordinates>
+                  45.3345088,-75.695281
+                </gml:coordinates>
+      </gml:Point>
+    </Value>
+  </Property>
+    <Property>
+      <Name>name</Name>
+      <Value>sample_update</Value>
+  </Property>
+  <Filter>
+    <FeatureId fid="poi.1"/>
+  </Filter>
+  </wfs:Update>
+</wfs:Transaction>

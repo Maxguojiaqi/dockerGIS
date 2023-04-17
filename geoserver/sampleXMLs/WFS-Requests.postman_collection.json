@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "59f98e1a-332f-4a17-8352-e566e974eda9",
+		"name": "WFS-Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addFeature",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<!--\r\n      YOU PROBABLY DO NOT WANT TO RUN THIS QUERY SINCE \r\n       IT WILL MODIFY YOUR SOURCE DATA FILES\r\n       \r\n       It will add a simple line to the tasmania_roads dataset.\r\n       http://localhost/geoserver/docker/wfs\r\n  -->\r\n<wfs:Transaction service=\"WFS\" version=\"1.0.0\"\r\n  xmlns:wfs=\"http://www.opengis.net/wfs\"\r\n  xmlns:gml=\"http://www.opengis.net/gml\"\r\n  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n  xsi:schemaLocation=\"http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.0.0/WFS-transaction.xsd http://www.openplans.org/cite http://localhost/geoserver/wfs/DescribeFeatureType?typename=docker:poi\">\r\n  <wfs:Insert>\r\n    <poi>\r\n      <geom>\r\n        <gml:Point srsName=\"http://www.opengis.net/def/crs/EPSG/0/4326\">\r\n                  <gml:coordinates>\r\n                    45.33524,-75.69386\r\n                  </gml:coordinates>\r\n        </gml:Point>\r\n      </geom>\r\n      <type>GCS</type>\r\n      <name>GCS Sample</name>\r\n    </poi>\r\n  </wfs:Insert>\r\n</wfs:Transaction>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/geoserver/docker/wfs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"geoserver",
+						"docker",
+						"wfs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editFeature",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " <!--       YOU PROBABLY DO NOT WANT TO RUN THIS QUERY SINCE \r\n       IT WILL MODIFY YOUR SOURCE DATA FILES\r\n\r\n      This will update the type field for the tasmania_roads dataset.\r\n      http://localhost/geoserver/cite/wfs\r\n   -->\r\n\r\n\r\n<wfs:Transaction service=\"WFS\" version=\"1.1.0\"\r\n  xmlns:ogc=\"http://www.opengis.net/ogc\"\r\n  xmlns:wfs=\"http://www.opengis.net/wfs\"\r\n  xmlns:gml=\"http://www.opengis.net/gml\">\r\n  <wfs:Update typeName=\"docker:poi\">\r\n  <Property>\r\n    <Name>geom</Name>\r\n    <Value>\r\n      <gml:Point srsName=\"http://www.opengis.net/def/crs/EPSG/0/4326\">\r\n                <gml:coordinates>\r\n                  45.3345088,-75.695281\r\n                </gml:coordinates>\r\n      </gml:Point>\r\n    </Value>\r\n  </Property>\r\n    <Property>\r\n      <Name>name</Name>\r\n      <Value>sample_update</Value>\r\n  </Property>\r\n  <Filter>\r\n    <FeatureId fid=\"poi.1\"/>\r\n  </Filter>\r\n  </wfs:Update>\r\n</wfs:Transaction>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/geoserver/docker/wfs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"geoserver",
+						"docker",
+						"wfs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeFeature",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<!-- We include this transaction as a sample for deletes.        -->\r\n<!--\r\n      YOU PROBABLY DO NOT WANT TO RUN THIS QUERY SINCE \r\n       IT WILL MODIFY YOUR SOURCE DATA FILES\r\n  -->\r\n<wfs:Transaction service=\"WFS\" version=\"1.0.0\"\r\n  xmlns:cdf=\"http://www.opengis.net/cite/data\"\r\n  xmlns:ogc=\"http://www.opengis.net/ogc\"\r\n  xmlns:wfs=\"http://www.opengis.net/wfs\">\r\n  <wfs:Delete typeName=\"docker:poi\">\r\n    <Filter>\r\n      <FeatureId fid=\"poi.2\"/>\r\n    </Filter>\r\n  </wfs:Delete>\r\n</wfs:Transaction>\r\n \r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/geoserver/docker/wfs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"geoserver",
+						"docker",
+						"wfs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

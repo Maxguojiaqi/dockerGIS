@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>OL Sample Web App</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/"> -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
+    <script src="../Turfjs/turf.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="headers.css" rel="stylesheet">
+  </head>
+  <body>
+    
+  <main>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-4">OL Sample Web App - Docker Test</span>
+        </a>
+
+        <!-- <ul class="nav nav-pills">
+          <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Main</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+        </ul> -->
+      </header>
+    </div>
+
+    <div class="b-example-divider"></div>
+    <div id="map" class="map" tabindex="0"></div>
+    <div id="editDrawer" class="editDrawer sidebar">
+      <a class="closebtn" id="closeEditDrawer">&times;</a>
+      <div id="editDrawerContent"></div>
+  </div>
+  <div id="addFeatureDrawer" class="addFeatureDrawer sidebar">
+      <a class="closebtn" id="closeAddDrawer">&times;</a>
+      <div id="addFeatureDrawerContent"></div>
+  </div>
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+    <script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>
+    <script src="./index.js"></script>
+  </main>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+a { 
+  text-decoration: none; 
+  color: white;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.map {
+  width: 100%;
+  height: 700px;
+  margin: 0;
+  position: absolute;
+  top: 30em;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+a.skiplink {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+a.skiplink:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  background-color: #fff;
+  padding: 0.3em;
+}
+#map:focus {
+  outline: #4A74A8 solid 0.15em;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar{
+  margin: 10px;
+}
+
+.editDrawer {
+  height: 500px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 6em;
+  left: 0;
+  background-color: lightblue;
+  overflow-x: hidden;
+  transition: 0.1s;
+  padding-top: 60px;
+}
+
+.editDrawer a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.editDrawer a:hover {
+  color: #f1f1f1;
+}
+
+.editDrawer .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .editDrawer {padding-top: 15px;}
+  .editDrawer a {font-size: 18px;}
+}
+
+#editButtons{
+  margin: 1em;
+}
+
+#currentObservation {
+  margin: 1em;
+}
+
+#editObservation {
+  margin: 1em;
+}
+
+.addFeatureDrawer {
+  height: 500px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 6em;
+  right: 0;
+  background-color: lightgreen;
+  overflow-x: hidden;
+  transition: 0.1s;
+  padding-top: 60px;
+}
+
+.addFeatureDrawer a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.addFeatureDrawer a:hover {
+  color: #f1f1f1;
+}
+
+.addFeatureDrawer .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#addFeatureDrawerContent {
+  margin:15px;
+}
+
+@media screen and (max-height: 450px) {
+  .addFeatureDrawer {padding-top: 15px;}
+  .addFeatureDrawer a {font-size: 18px;}
+}
+
+.edit-widget {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  height: 50px;
+  width: 100px
+}
+.ol-touch .edit-widget {
+  bottom: 80px;
+}
+
+.commit-widget {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  height: 50px;
+  width: 100px
+}
+.ol-touch .commit-widget {
+  bottom: 80px;
+}

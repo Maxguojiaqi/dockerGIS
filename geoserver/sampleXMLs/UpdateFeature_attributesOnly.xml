@@ -1,0 +1,16 @@
+<!--http://localhost/geoserver/docker/wfs-->
+
+<wfs:Transaction service="WFS" version="1.0.0"
+  xmlns:cite="http://www.openplans.org/cite"
+  xmlns:ogc="http://www.opengis.net/ogc"
+  xmlns:wfs="http://www.opengis.net/wfs">
+  <wfs:Update typeName="cite:observation">
+    <Property>
+      <Name>name</Name>
+      <Value>sample_update</Value>
+    </Property>
+    <Filter>
+      <FeatureId fid="poi.1"/>
+    </Filter>
+  </wfs:Update>
+</wfs:Transaction>
